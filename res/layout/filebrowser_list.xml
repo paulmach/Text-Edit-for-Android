@@ -29,8 +29,7 @@
 		android:layout_height="wrap_content"
 		android:color="@android:color/white" />
 	
-	<!--
-	This is to make sure the text box is always big -->
+	<!-- This is to make sure the text box is always big -->
 	<View
 		android:layout_width="fill_parent" 
 		android:layout_height="fill_parent"

@@ -5,7 +5,6 @@
 	<string name="warranty">Warranty Information: This software is provided AS IS and the author makes NO WARRANTY or representation either express or implied as to its quality, accuracy, or fitness for a particular purpose.</string>
 	<string name="warranty_short">This software is provided AS IS and the author makes NO WARRANTY or representation either express or implied as to its quality, accuracy, or fitness for a particular purpose.</string>
 
-
 	<!-- Basic Stuff -->
 	<string name="newFileName">Untitled</string>
 	<string name="onSaveMessage">File saved.</string>
@@ -35,9 +34,9 @@
 
 	<!-- Preference stuff 
 		    If you edit this stuff you need to change updateOptions() to make it match -->
-	<string name="linewrap">true</string>
+<!--  	<string name="linewrap">true</string>
 	<string name="autocase">true</string>
-	
+	-->
 	<!--  File Browser stuff -->
 	<string name="nofilesindirectory">This directory is empty.</string>
 </resources>

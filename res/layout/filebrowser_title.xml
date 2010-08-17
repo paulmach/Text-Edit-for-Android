@@ -41,5 +41,4 @@
 	    	android:layout_height="wrap_content" 
 	    	android:gravity="right" />
 	</TableRow>
-
 </TableLayout>

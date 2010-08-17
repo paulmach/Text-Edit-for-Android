@@ -127,7 +127,7 @@ public class pmTextEdit extends Activity
 	/****************************************************************
 	 * class CustomEditText 
 	 * 		A extended EditText so we can make some personal changes 
-	 * 		to it. May not be necessary to have our own class, be it 
+	 * 		to it. May not be necessary to have our own class, but it 
 	 * 		makes it easier */
 	public static class CustomEditText extends EditText
 	{
@@ -742,9 +742,6 @@ public class pmTextEdit extends Activity
 			editor.putBoolean("openingIntent", openingIntent);
 			editor.commit();
 		}
-
-		// display a little message
-		// Toast.makeText(this, "Pause", Toast.LENGTH_SHORT).show();
 	} // end onPause()
 
 	
@@ -863,8 +860,6 @@ public class pmTextEdit extends Activity
 		} catch (Exception e) {
 			createNew();
 		}
-		// display a little message
-		// Toast.makeText(this, "Resume", Toast.LENGTH_SHORT).show();
 	} // end onResume()
 
 	
@@ -1581,7 +1576,7 @@ public class pmTextEdit extends Activity
 		startActivity(Intent.createChooser(sIntent, "Send attachment with:"));
 		
 		sendingAttachment = false;
-	}
+	} // end sendAttachment()
 		
 	public static boolean isTextChanged()	// checks if the text has been changed
 	{
@@ -1597,7 +1592,7 @@ public class pmTextEdit extends Activity
 		} 
 		
 		return false;
-	} // isTextChanged()
+	} // end isTextChanged()
 	
 	public static int countQuotes(String t) // count " in string
 	{
@@ -1610,7 +1605,7 @@ public class pmTextEdit extends Activity
 		} while (i != -1);
 		
 		return count;
-	} // countQuotes()
+	} // end countQuotes()
 	
 	// returns a file list for out autocomplete open and save dialogs
 	private static File prevFile = null;
@@ -1666,7 +1661,7 @@ public class pmTextEdit extends Activity
 		}
 		
 		prevFile = pFile;
-	} // getFileList()
+	} // end getFileList()
 	
 	
 	/****************************************************************

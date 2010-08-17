@@ -58,13 +58,9 @@ public class FileViewArrayAdapter extends ArrayAdapter<String>
 	
 	/****************************************************************
 	 * getView
-	 * 		the overroad getView method */
+	 * 		the overridden getView method */
 	public View getView(int position, View convertView, ViewGroup parent) 
-	{
-		// get the view that would normally be returned
-//		View v = super.getView(position, convertView, parent);
-//		return v;
-		
+	{		
 		// update the text accordingly
 		File f = new File(getItem(position));
 		int imageid;
@@ -101,10 +97,6 @@ public class FileViewArrayAdapter extends ArrayAdapter<String>
 				imageid = R.drawable.fileicon_default;
 		}
 
-		// these two things are now done globally
-		// LayoutInflater factory = LayoutInflater.from(getContext());
-		// final View textEntryView = factory.inflate(R.layout.filebrowser_item, null);
-		
 		// This really speeds things up. Because only the number of views displayed at one time
 		// are actually inflated
 		View textEntryView;
@@ -113,23 +105,19 @@ public class FileViewArrayAdapter extends ArrayAdapter<String>
 		else
 			textEntryView = factory.inflate(R.layout.filebrowser_item, null);
 		
-		
 		TextView tv = (TextView) textEntryView.findViewById(R.id.itemtext);
 		tv.setText(getItem(position));
 
 		ImageView iv = (ImageView) textEntryView.findViewById(R.id.itemimage);
 		iv.setImageResource(imageid);
 
-		
 		if (mode == FILE_BROWSER_MODE)
 		{
-//			Spannable.Factory sf = new Spannable.Factory();
 			Spannable text = sf.newSpannable(f.getName() + formatFileSize(f));
 			text.setSpan(new AbsoluteSizeSpan(20), 0, f.getName().length(), Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
 			
 			tv.setText(text);
 		} else {	// default to RECENT_FILE_MODE
-//			Spannable.Factory sf = new Spannable.Factory();
 			Spannable text;
 			if (f.getParent().toString().equals("/"))
 				text = sf.newSpannable(f.getName() + "\n/");

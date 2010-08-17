@@ -72,7 +72,6 @@ public class FontSizePreference extends DialogPreference
 			}
 		});
 		builder.setNegativeButton("Cancel", null);
-
 	
 		// load the font names and create the adapter
 		String[] arrayOfFonts = {"Extra Small", "Small", "Medium", "Large", "Huge"};

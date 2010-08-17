@@ -8,7 +8,7 @@ import android.widget.Toast;
 
 /* ClearSearchSuggestions
  * 		The Special clear recent search suggestions
- * 		Needs it's own special class so you can just click on it */
+ * 		Needs its own special class so you can just click on it */
 public class ClearSearchSuggestions extends Preference
 {
 	// This is the constructor called by the inflater

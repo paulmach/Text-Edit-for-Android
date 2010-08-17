@@ -21,8 +21,7 @@ public class EditPreferences extends PreferenceActivity
 
 		// add preferences
 		addPreferencesFromResource(R.xml.preferences);		
-	
-	
+		
 		// default dir value to display
 		SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
 		String current = sharedPref.getString("defaultdir", "/sdcard/");
@@ -59,6 +58,4 @@ public class EditPreferences extends PreferenceActivity
 		Preference p = findPreference("defaultdir");
 		p.setSummary(location);		
 	}
-
-    
 } // end class EditPreferences

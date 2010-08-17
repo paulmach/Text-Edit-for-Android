@@ -22,7 +22,10 @@ import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemLongClickListener;
 
-
+/****************************************************************
+ * FileBrowser
+ *		The activity where you browse all the files and such 
+ *		This file needs a few more comments, I'll admit */
 public class FileBrowser extends Activity
 {
 	private final static int MENU_MKDIR = Menu.FIRST;
@@ -118,8 +121,7 @@ public class FileBrowser extends Activity
 					finish();
 				}						
 		}} );
-		
-		
+				
 		/**********************
 		 * get the first location */
 		Intent intent = getIntent();
@@ -154,7 +156,7 @@ public class FileBrowser extends Activity
 				v.setText("");
 			}
 		}
-	}
+	} // end onPrepareDialog()
 	
 	/****************************************************************
 	 * onCreateDialog()
@@ -178,8 +180,8 @@ public class FileBrowser extends Activity
 							showDialog(DIALOG_RENAME);						
 						}
 					}
-                })
-                .create();
+				})
+				.create();
 			}
 			case DIALOG_RENAME: {
 				// create the layout we want
@@ -211,7 +213,6 @@ public class FileBrowser extends Activity
 					})
 				.create();
 			}
-
 			case DIALOG_MKDIR: {
 				// create the layout we want
 				LayoutInflater factory = LayoutInflater.from(this);
@@ -242,8 +243,6 @@ public class FileBrowser extends Activity
 					})
 				.create();
 			}
-
-			
 			case DIALOG_SHOULD_DELETE: {
 				return new AlertDialog.Builder(this)
 				.setTitle("Confirm deletion of " + dialog_file.getName())
@@ -266,7 +265,6 @@ public class FileBrowser extends Activity
 				})
                 .create();
 			}
-			
 			case DIALOG_COULDNT_DELETE: {
 				return new AlertDialog.Builder(this)
 				.setTitle("Error")
@@ -278,7 +276,6 @@ public class FileBrowser extends Activity
 				})
                 .create();
 			}
-
 			case DIALOG_COULDNT_DELETEDIR: {
 				return new AlertDialog.Builder(this)
 				.setTitle("Error")
@@ -290,7 +287,6 @@ public class FileBrowser extends Activity
 				})
                 .create();
 			}
-			
 			case DIALOG_COULDNT_RENAME: {
 				return new AlertDialog.Builder(this)
 				.setTitle("Error")
@@ -302,7 +298,6 @@ public class FileBrowser extends Activity
 				})
                 .create();
 			}
-			
 			case DIALOG_COULDNT_MKDIR: {
 				return new AlertDialog.Builder(this)
 				.setTitle("Error")
@@ -315,7 +310,7 @@ public class FileBrowser extends Activity
                 .create();
 			}
 		}
-	}
+	} // end onCreateDialog()
 
 	
 	/****************************************************************
@@ -338,7 +333,7 @@ public class FileBrowser extends Activity
 		}
 		
 		return true;
-	}
+	} // end onOptionsItemSelected()
 	
 	
 	/********************************
@@ -373,7 +368,7 @@ public class FileBrowser extends Activity
 		// onRestore and onSave methods
 		updateFileBrowserList(filePath.toString(), false);
 		
-	} // onRestoreInstanceState()
+	} // end onRestoreInstanceState()
 	
 	/****************************************************************
 	 * updateFileBrowserList()
@@ -445,5 +440,5 @@ public class FileBrowser extends Activity
 			fileBrowserList.setSelection(0);
 		
 		setResult(1, (new Intent()).setAction((String) filePath));
-	} // updateFileBrowserList()
-}
+	} // end updateFileBrowserList()
+} // end class fileBrowser
