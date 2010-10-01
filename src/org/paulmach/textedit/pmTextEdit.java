@@ -128,7 +128,12 @@ public class pmTextEdit extends Activity
 	 * class CustomEditText 
 	 * 		A extended EditText so we can make some personal changes 
 	 * 		to it. May not be necessary to have our own class, but it 
-	 * 		makes it easier */
+	 * 		makes it easier 
+	 * 
+	 * UPDATE: in 1.3.1 the addTextChangedListener functions didn't work
+	 * 		Don't know why. So I added the important onTextChanged function
+	 * 		in updateOptions. 
+	 * */
 	public static class CustomEditText extends EditText
 	{
 		// we need this constructor for LayoutInflater
@@ -138,22 +143,6 @@ public class pmTextEdit extends Activity
 
 			this.setScrollBarStyle(SCROLLBARS_OUTSIDE_INSET);
 			this.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_MULTI_LINE);
-			
-			addTextChangedListener(new TextWatcher() {
-				public void onTextChanged(CharSequence one, int a, int b, int c) {
-	
-					// put a little star in the title if the file is changed
-					if (!isTextChanged())
-					{
-						CharSequence temp = title.getText();
-						title.setText("* " + temp);
-					}
-				}
-
-				// complete the interface
-				public void afterTextChanged(Editable s) { }
-				public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
-			});
 		}
 	} // end class CustomEditText
 	
@@ -171,7 +160,7 @@ public class pmTextEdit extends Activity
 		
 		updateOptions();
 
-		
+
 		Intent intent = getIntent();		
 		
 		// search action
@@ -270,13 +259,13 @@ public class pmTextEdit extends Activity
 	 * createNew()
 	 * 		create a new file */
 	public void createNew()
-	{
+	{	
 		// set the new context
 		setContentView(R.layout.edit);	// update options done below
 
 		text = (EditText) findViewById(R.id.note);
 		title = (TextView) findViewById(R.id.notetitle);
-		
+				
 		text.setText("");
 		title.setText(R.string.newFileName);
 		
@@ -573,7 +562,7 @@ public class pmTextEdit extends Activity
 	protected void updateOptions()
 	{
 		boolean value;
-		
+
 		// load the preferences
 		SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
 		autoComplete = sharedPref.getBoolean("autocomplete", false);
@@ -596,6 +585,23 @@ public class pmTextEdit extends Activity
 		
 		text = (EditText) findViewById(R.id.note);
 		title = (TextView) findViewById(R.id.notetitle);
+	
+		text.addTextChangedListener(new TextWatcher() {
+
+			public void onTextChanged(CharSequence one, int a, int b, int c) {
+
+				// put a little star in the title if the file is changed
+				if (!isTextChanged())
+				{
+					CharSequence temp = title.getText();
+					title.setText("* " + temp);
+				}
+			}
+
+			// complete the interface
+			public void afterTextChanged(Editable s) { }
+			public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
+		});
 	
 		/********************************
 		 * links clickable */
@@ -665,8 +671,6 @@ public class pmTextEdit extends Activity
 		
 		title.setTextColor(bgcolor);
 		title.setBackgroundColor(fontcolor);
-		
-		
 		
 		text.setLinksClickable(true);
 	} // updateOptions()
@@ -1072,7 +1076,7 @@ public class pmTextEdit extends Activity
 								if (!errorSaving && sendingAttachment)
 									sendAttachment();
 								
-								if (!errorSaving && openingIntent)
+								if (!errorSaving && openingIntent && getIntent().getData() != null)
 									openFile(getIntent().getData());
 							}
 						}
@@ -1583,6 +1587,7 @@ public class pmTextEdit extends Activity
 		CharSequence temp = title.getText();
 		
 		try {	// was getting error on the developer site, so added this to "catch" it
+		
 			if (temp.charAt(0) == '*')
 			{
 				return true;
@@ -1590,7 +1595,7 @@ public class pmTextEdit extends Activity
 		} catch (Exception e) {
 			return false;
 		} 
-		
+
 		return false;
 	} // end isTextChanged()
 	
