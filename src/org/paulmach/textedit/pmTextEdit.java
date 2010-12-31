@@ -13,7 +13,6 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.SearchManager;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -25,10 +24,8 @@ import android.os.ParcelFileDescriptor;
 import android.preference.PreferenceManager;
 import android.provider.SearchRecentSuggestions;
 import android.text.Editable;
-import android.text.InputType;
 import android.text.TextWatcher;
 import android.text.util.Linkify;
-import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -53,7 +50,8 @@ public class pmTextEdit extends Activity
 	private final static int MENU_OPTIONS_ID = Menu.FIRST + 4;
 	private final static int MENU_NEW_ID = Menu.FIRST + 5;
 	private final static int MENU_EMAIL = Menu.FIRST + 6;
-	private final static int MENU_ATTACHMENT = Menu.FIRST + 7;
+	private final static int MENU_SEARCH = Menu.FIRST + 7;
+	private final static int MENU_ATTACHMENT = Menu.FIRST + 8;
 	
 	// dialog ids
 	private final static int DIALOG_SAVE_FILE = 1;
@@ -115,6 +113,7 @@ public class pmTextEdit extends Activity
 
 	private boolean fromIntent = false;
 	private boolean openingIntent = false;
+	private Intent newIntent = null;
 	
 	private boolean fromSearch = false;
 	private String queryString = "";
@@ -123,40 +122,6 @@ public class pmTextEdit extends Activity
 	private boolean errorSaving = false;
 
 	private int fileformat;
-	
-	/****************************************************************
-	 * class CustomEditText 
-	 * 		A extended EditText so we can make some personal changes 
-	 * 		to it. May not be necessary to have our own class, but it 
-	 * 		makes it easier */
-	public static class CustomEditText extends EditText
-	{
-		// we need this constructor for LayoutInflater
-		public CustomEditText(Context context, AttributeSet attrs)
-		{
-			super(context, attrs);
-
-			this.setScrollBarStyle(SCROLLBARS_OUTSIDE_INSET);
-			this.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_MULTI_LINE);
-			
-			addTextChangedListener(new TextWatcher() {
-				public void onTextChanged(CharSequence one, int a, int b, int c) {
-	
-					// put a little star in the title if the file is changed
-					if (!isTextChanged())
-					{
-						CharSequence temp = title.getText();
-						title.setText("* " + temp);
-					}
-				}
-
-				// complete the interface
-				public void afterTextChanged(Editable s) { }
-				public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
-			});
-		}
-	} // end class CustomEditText
-	
 	
 	/****************************************************************
 	 * onCreate() */
@@ -171,8 +136,23 @@ public class pmTextEdit extends Activity
 		
 		updateOptions();
 
-		
-		Intent intent = getIntent();		
+		Intent intent = getIntent();    
+		newIntent(intent);
+	} // end onCreate()
+
+	/****************************************************************
+	 * onNewIntent() */
+	public void onNewIntent(Intent intent)
+	{
+		super.onNewIntent(intent);
+		newIntent(intent);
+	}
+	
+	/****************************************************************
+	 * newIntent() */
+	public void newIntent(Intent intent)
+	{
+		setIntent(intent);
 		
 		// search action
 		if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
@@ -193,7 +173,7 @@ public class pmTextEdit extends Activity
 		} else {
 		
 			// opening something action			
-			Uri mUri = intent.getData();
+			Uri mUri = intent.getData();			
 			
 			if (mUri != null)
 			{
@@ -204,24 +184,26 @@ public class pmTextEdit extends Activity
 				number++;
 				intent.putExtra("number", number);
 				
-				if (number == 1)
+				// if we've got a different file opening up
+				// before we used numbers but that was causing problems on some systems
+				if (!mUri.getPath().equals(filename)) // || number == 1)
 				{	
 					// set stuff up
 					fromIntent = true;
 					
-					// figure out what to do
+					// figure out what to do					
 					if (!mUri.getPath().equals(filename) && isTextChanged())
 					{					
 						openingIntent = true;
+						newIntent = intent;
 						showDialog(DIALOG_SHOULD_SAVE_INTENT);
 					} else if (!mUri.getPath().equals(filename)) {		
 						openFile(mUri);
 					}
 				}
 	        }
-		}
-	} // end onCreate()
-
+		}	
+	}
 	
 	/****************************************************************
 	 * onSaveInstanceState() */
@@ -250,7 +232,7 @@ public class pmTextEdit extends Activity
 	public void onRestoreInstanceState(Bundle savedInstanceState)
 	{
 		super.onRestoreInstanceState(savedInstanceState);
-	 
+		
 		// Restore UI state from the savedInstanceState.
 		// This bundle has also been passed to onCreate.
 		creatingFile = savedInstanceState.getBoolean("creatingFile");
@@ -262,7 +244,6 @@ public class pmTextEdit extends Activity
 		sendingAttachment = savedInstanceState.getBoolean("sendingAttachment");
 
 		temp_filename = savedInstanceState.getString("temp_filename");
-
 	} // onRestoreInstanceState()
 
 
@@ -270,13 +251,13 @@ public class pmTextEdit extends Activity
 	 * createNew()
 	 * 		create a new file */
 	public void createNew()
-	{
+	{	
 		// set the new context
 		setContentView(R.layout.edit);	// update options done below
 
 		text = (EditText) findViewById(R.id.note);
 		title = (TextView) findViewById(R.id.notetitle);
-		
+
 		text.setText("");
 		title.setText(R.string.newFileName);
 		
@@ -573,7 +554,7 @@ public class pmTextEdit extends Activity
 	protected void updateOptions()
 	{
 		boolean value;
-		
+
 		// load the preferences
 		SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
 		autoComplete = sharedPref.getBoolean("autocomplete", false);
@@ -596,6 +577,23 @@ public class pmTextEdit extends Activity
 		
 		text = (EditText) findViewById(R.id.note);
 		title = (TextView) findViewById(R.id.notetitle);
+	
+		text.addTextChangedListener(new TextWatcher() {
+
+			public void onTextChanged(CharSequence one, int a, int b, int c) {
+
+				// put a little star in the title if the file is changed
+				if (!isTextChanged())
+				{
+					CharSequence temp = title.getText();
+					title.setText("* " + temp);
+				}
+			}
+
+			// complete the interface
+			public void afterTextChanged(Editable s) { }
+			public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
+		});
 	
 		/********************************
 		 * links clickable */
@@ -665,8 +663,6 @@ public class pmTextEdit extends Activity
 		
 		title.setTextColor(bgcolor);
 		title.setBackgroundColor(fontcolor);
-		
-		
 		
 		text.setLinksClickable(true);
 	} // updateOptions()
@@ -754,7 +750,7 @@ public class pmTextEdit extends Activity
 		
 		if (!fromIntent)
 			myResume();
-		
+
 		fromIntent = false;
 	}
 	
@@ -1072,7 +1068,7 @@ public class pmTextEdit extends Activity
 								if (!errorSaving && sendingAttachment)
 									sendAttachment();
 								
-								if (!errorSaving && openingIntent)
+								if (!errorSaving && openingIntent && getIntent().getData() != null)
 									openFile(getIntent().getData());
 							}
 						}
@@ -1380,7 +1376,14 @@ public class pmTextEdit extends Activity
 								
 								if (!errorSaving && openingIntent)
 								{
-									openFile(getIntent().getData());
+									Uri mUri;
+									
+									if (newIntent != null)
+										mUri = newIntent.getData();
+									else
+										mUri = getIntent().getData();
+
+									openFile(mUri);
 								}
 								
 								if (!errorSaving && sendingAttachment)
@@ -1407,7 +1410,17 @@ public class pmTextEdit extends Activity
 							}
 							
 							if (openingIntent)
-								openFile(getIntent().getData());
+							{
+								Uri mUri;
+								
+								if (newIntent != null)
+									mUri = newIntent.getData();
+								else
+									mUri = getIntent().getData();
+								
+								if (mUri != null && !mUri.getPath().equals(filename))
+									openFile(mUri);
+							}
 						}
 					})
 					.create();
@@ -1475,6 +1488,7 @@ public class pmTextEdit extends Activity
 		menu.add(0, MENU_OPENRECENT_ID, 0, "Recent").setShortcut('0', 'r').setIcon(R.drawable.icon_openrecent);
 		
 		menu.add(0, MENU_EMAIL, 0, "Email Text").setShortcut('0', 'e');
+		menu.add(0, MENU_SEARCH, 0, "Search Text").setShortcut('0', 'f');
 		menu.add(0, MENU_ATTACHMENT, 0, "Email as Attachment");
 		menu.add(0, MENU_OPTIONS_ID, 0, "Options").setIcon(R.drawable.icon_options);
 		return true;
@@ -1548,6 +1562,10 @@ public class pmTextEdit extends Activity
 				sendIntent.setType("message/rfc822");
 				startActivity(Intent.createChooser(sendIntent, "Send email with"));
 				break;
+			
+			case MENU_SEARCH: // Trigger search
+				this.onSearchRequested();
+				break;
 				
 			case MENU_ATTACHMENT: // Email Attachment
 				sendingAttachment = true;
@@ -1583,6 +1601,7 @@ public class pmTextEdit extends Activity
 		CharSequence temp = title.getText();
 		
 		try {	// was getting error on the developer site, so added this to "catch" it
+		
 			if (temp.charAt(0) == '*')
 			{
 				return true;
@@ -1590,7 +1609,7 @@ public class pmTextEdit extends Activity
 		} catch (Exception e) {
 			return false;
 		} 
-		
+
 		return false;
 	} // end isTextChanged()
 	
