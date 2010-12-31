@@ -8,7 +8,7 @@
 		android:layout_width="fill_parent" 
 		android:layout_height="wrap_content"
 		android:background="#111111"
-		android:text="Untitled"
+		android:text="@string/newFileName"
 		android:textAppearance="?android:attr/textAppearanceMedium"/>
 	<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
 		android:id="@+id/scroll"
