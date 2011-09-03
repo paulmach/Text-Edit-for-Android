@@ -31,7 +31,8 @@
 	<string name="shouldOverwrite">You\'re about to replace an existing file.</string>
 
 	<string name="onSendEmptyMessage">Can not send an empty untitled file.</string>
-
+	<string name="externalModify">This file has been modified externally. Reload?</string>
+	
 	<!-- Preference stuff 
 		    If you edit this stuff you need to change updateOptions() to make it match -->
 <!--  	<string name="linewrap">true</string>

@@ -64,6 +64,7 @@ public class pmTextEdit extends Activity
 	private final static int DIALOG_READ_ERROR = 8;
 	private final static int DIALOG_NOTFOUND_ERROR = 9;
 	private final static int DIALOG_SHOULD_SAVE_INTENT = 13;
+	private final static int DIALOG_MODIFIED = 14;
 	
 	private final static int DIALOG_SAVE_FILE_AUTOCOMPLETE = 10;
 	private final static int DIALOG_OPEN_FILE_AUTOCOMPLETE = 11;
@@ -85,6 +86,7 @@ public class pmTextEdit extends Activity
 	protected static TextView title = null; 
 
 	protected CharSequence filename = "";
+	protected long lastModified = 0;
 	protected boolean untitled = true;
 	
 	static private List<String> items = null;
@@ -183,10 +185,11 @@ public class pmTextEdit extends Activity
 				int number = intent.getIntExtra("number", 0);
 				number++;
 				intent.putExtra("number", number);
-				
-				// if we've got a different file opening up
-				// before we used numbers but that was causing problems on some systems
-				if (!mUri.getPath().equals(filename)) // || number == 1)
+
+				// when you revist the app, from rotate or otherwise, the intent is still
+				// with the app. So we don't want to reopen every time
+				// I don't know if this is the best way to do this or not, but it works for me.
+				if (!mUri.getPath().equals(filename) && number <= 1)
 				{	
 					// set stuff up
 					fromIntent = true;
@@ -242,7 +245,7 @@ public class pmTextEdit extends Activity
 		openingRecent = savedInstanceState.getBoolean("openingRecent");
 		openingIntent = savedInstanceState.getBoolean("openingIntent");
 		sendingAttachment = savedInstanceState.getBoolean("sendingAttachment");
-
+		
 		temp_filename = savedInstanceState.getString("temp_filename");
 	} // onRestoreInstanceState()
 
@@ -283,6 +286,7 @@ public class pmTextEdit extends Activity
 
 		fileformat = FILEFORMAT_NL;
 		filename = "";
+		lastModified = 0;
 		untitled = true;
 
 		creatingFile = false;
@@ -458,7 +462,9 @@ public class pmTextEdit extends Activity
 			// Okay, now we can set everything up
 			text.setText(newText);
 			title.setText(fname);
-			
+
+			File f = new File(fname.toString());
+			lastModified = f.lastModified();
 			filename = fname;
 			untitled = false;
 			
@@ -471,7 +477,7 @@ public class pmTextEdit extends Activity
 			openingError = true;
 			showDialog(DIALOG_READ_ERROR);
 		}
-		
+
 		openingIntent = false;
 		temp_filename = "";
 	} // end openFile(CharSequence fname, StringBuffer result)
@@ -529,6 +535,8 @@ public class pmTextEdit extends Activity
 			filename = fname;
 			untitled = false;
 		
+			lastModified = (new File(filename.toString())).lastModified();
+			
 			temp_filename = "";
 			
 			addRecentFile(fname);
@@ -728,6 +736,7 @@ public class pmTextEdit extends Activity
 			else 
 				t = "";
 			editor.putString("filename", t);
+			editor.putLong("lastModified", lastModified);
 			editor.putInt("filename-quotes", countQuotes(t));
 			
 			editor.putInt("selection-start", text.getSelectionStart());
@@ -770,6 +779,7 @@ public class pmTextEdit extends Activity
 			int selectionStart = prefs.getInt("selection-start", -1);
 			int selectionEnd = prefs.getInt("selection-end", -1);
 			
+			lastModified = prefs.getLong("lastModified", lastModified);
 			filename = prefs.getString("filename", null);
 			if (filename == null || filename == "")
 				untitled = true;
@@ -855,6 +865,16 @@ public class pmTextEdit extends Activity
 			}
 		} catch (Exception e) {
 			createNew();
+		}		
+
+		// figure out if the the file has been previously modified
+		if (!creatingFile && !savingFile && !openingFile && !openingError && !openingRecent
+		 && !openingIntent && !sendingAttachment)
+		{
+			if (lastModified != 0 && lastModified != (new File(filename.toString())).lastModified())
+			{
+				showDialog(DIALOG_MODIFIED);
+			}
 		}
 	} // end onResume()
 
@@ -1421,6 +1441,22 @@ public class pmTextEdit extends Activity
 								if (mUri != null && !mUri.getPath().equals(filename))
 									openFile(mUri);
 							}
+						}
+					})
+					.create();
+			}
+			case DIALOG_MODIFIED: {		
+				return new AlertDialog.Builder(this)
+					.setIcon(R.drawable.alert_dialog_icon)
+					.setTitle(R.string.externalModify)
+					.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+						public void onClick(DialogInterface dialog, int whichButton) {
+							openFile(filename);
+						}
+					})
+					.setNegativeButton("No", new DialogInterface.OnClickListener() {
+						public void onClick(DialogInterface dialog, int whichButton) {
+							lastModified = (new File(filename.toString())).lastModified();
 						}
 					})
 					.create();
