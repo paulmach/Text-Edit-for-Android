@@ -25,15 +25,11 @@ import android.preference.PreferenceManager;
 import android.provider.SearchRecentSuggestions;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.text.method.KeyListener;
-import android.text.method.KeyListener;
 import android.text.util.Linkify;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnKeyListener;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.AutoCompleteTextView;
@@ -91,6 +87,7 @@ public class pmTextEdit extends Activity
 	// some global variables
 	protected static EditText text = null;
 	protected static TextView title = null; 
+	protected static boolean typewriterSound = false;
 
 	protected CharSequence filename = "";
 	protected long lastModified = 0;
@@ -569,7 +566,6 @@ public class pmTextEdit extends Activity
 		text.requestFocus();
 	} // end saveNote()
 	
-	
 	/****************************************************************
 	 * updateOptions()
 	 * 		start options app */
@@ -598,12 +594,16 @@ public class pmTextEdit extends Activity
 		}
 		
 		text = (EditText) findViewById(R.id.note);
-		title = (TextView) findViewById(R.id.notetitle);
-	
+		title = (TextView) findViewById(R.id.notetitle);	
+		typewriterSound = sharedPref.getBoolean("typewriter", false);
+		
 		text.addTextChangedListener(new TextWatcher() {
 
 			public void onTextChanged(CharSequence one, int a, int b, int c) {
-
+				if (typewriterSound) {
+					mSoundManager.playSound(SOUND_KEY_DOWN);
+				}
+				
 				// put a little star in the title if the file is changed
 				if (!isTextChanged())
 				{
@@ -617,18 +617,6 @@ public class pmTextEdit extends Activity
 			public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
 		});
 
-		boolean typewriter = sharedPref.getBoolean("typewriter", false);
-		if (typewriter) {
-			text.setOnKeyListener(new OnKeyListener() {
-				public boolean onKey(View v, int keyCode, KeyEvent event) {
-					if (event.getAction() == KeyEvent.ACTION_DOWN) {
-						mSoundManager.playSound(SOUND_KEY_DOWN);
-					}
-			        return false;
-			    }
-				
-			});
-		}
 		/********************************
 		 * links clickable */
 		boolean linksclickable = sharedPref.getBoolean("linksclickable", false);
