@@ -18,6 +18,11 @@
 			android:title="Sentence Case"  
 			android:summary="Capitalize first letter in sentences"
 			android:defaultValue="true" />
+        <CheckBoxPreference 
+               android:key="typewriter"  
+               android:title="Typewriter sound effects"  
+               android:summary="Play a sound every time a key was pressed"
+               android:defaultValue="false" /> 		
 		<CheckBoxPreference  
 			android:key="linksclickable"
 			android:title="Auto Link"  

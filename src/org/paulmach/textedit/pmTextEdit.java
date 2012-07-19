@@ -81,9 +81,13 @@ public class pmTextEdit extends Activity
 	private final static int REQUEST_FILE_BROWSER_OPEN = 2;
 	private final static int REQUEST_FILE_BROWSER_SAVE = 3;
 	
+	// sounds
+	private final static int SOUND_KEY_DOWN = 1;
+	
 	// some global variables
 	protected static EditText text = null;
 	protected static TextView title = null; 
+	protected static boolean typewriterSound = false;
 
 	protected CharSequence filename = "";
 	protected long lastModified = 0;
@@ -125,6 +129,8 @@ public class pmTextEdit extends Activity
 
 	private int fileformat;
 	
+	private SoundManager mSoundManager;
+	
 	/****************************************************************
 	 * onCreate() */
 	public void onCreate(Bundle savedInstanceState)
@@ -140,6 +146,11 @@ public class pmTextEdit extends Activity
 
 		Intent intent = getIntent();    
 		newIntent(intent);
+		
+        mSoundManager = new SoundManager();
+        mSoundManager.initSounds(getBaseContext());
+        mSoundManager.addSound(SOUND_KEY_DOWN, R.raw.typewriter);
+		
 	} // end onCreate()
 
 	/****************************************************************
@@ -555,7 +566,6 @@ public class pmTextEdit extends Activity
 		text.requestFocus();
 	} // end saveNote()
 	
-	
 	/****************************************************************
 	 * updateOptions()
 	 * 		start options app */
@@ -584,12 +594,16 @@ public class pmTextEdit extends Activity
 		}
 		
 		text = (EditText) findViewById(R.id.note);
-		title = (TextView) findViewById(R.id.notetitle);
-	
+		title = (TextView) findViewById(R.id.notetitle);	
+		typewriterSound = sharedPref.getBoolean("typewriter", false);
+		
 		text.addTextChangedListener(new TextWatcher() {
 
 			public void onTextChanged(CharSequence one, int a, int b, int c) {
-
+				if (typewriterSound) {
+					mSoundManager.playSound(SOUND_KEY_DOWN);
+				}
+				
 				// put a little star in the title if the file is changed
 				if (!isTextChanged())
 				{
@@ -602,7 +616,7 @@ public class pmTextEdit extends Activity
 			public void afterTextChanged(Editable s) { }
 			public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
 		});
-	
+
 		/********************************
 		 * links clickable */
 		boolean linksclickable = sharedPref.getBoolean("linksclickable", false);
