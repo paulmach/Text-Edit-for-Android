@@ -20,12 +20,12 @@
         "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\drawable\\icon_openrecent.png"
     },
     {
-        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_saveas.png",
-        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\drawable\\icon_saveas.png"
-    },
-    {
         "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fileicon_php.png",
         "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\drawable\\fileicon_php.png"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_saveas.png",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\drawable\\icon_saveas.png"
     },
     {
         "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fileicon_f.png",

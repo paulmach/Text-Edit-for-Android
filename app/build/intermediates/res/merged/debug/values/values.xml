@@ -5,6 +5,7 @@
     <string name="app_name">Text Edit</string>
     <string name="defaultFilePath">/sdcard/</string>
     <string name="externalModify">This file has been modified externally. Reload?</string>
+    <string name="file_browser">File Browser</string>
     <string name="newFile">New File</string>
     <string name="newFileName">Untitled</string>
     <string name="nofilesindirectory">This directory is empty.</string>

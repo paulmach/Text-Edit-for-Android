@@ -11,14 +11,7 @@
                     "endOffset": 127
                 },
                 "from": {
-                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 24,
-                        "startColumn": 1,
-                        "startOffset": 1174,
-                        "endColumn": 73,
-                        "endOffset": 1246
-                    }
+                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -30,14 +23,7 @@
                     "endOffset": 313
                 },
                 "from": {
-                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 25,
-                        "startColumn": 1,
-                        "startOffset": 1249,
-                        "endColumn": 182,
-                        "endOffset": 1430
-                    }
+                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -49,14 +35,7 @@
                     "endOffset": 360
                 },
                 "from": {
-                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 57,
-                        "endColumn": 46,
-                        "endOffset": 99
-                    }
+                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -68,14 +47,7 @@
                     "endOffset": 413
                 },
                 "from": {
-                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 23,
-                        "startColumn": 1,
-                        "startOffset": 1123,
-                        "endColumn": 49,
-                        "endOffset": 1171
-                    }
+                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -87,14 +59,7 @@
                     "endOffset": 504
                 },
                 "from": {
-                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 33,
-                        "startColumn": 1,
-                        "startOffset": 1869,
-                        "endColumn": 87,
-                        "endOffset": 1955
-                    }
+                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -102,17 +67,17 @@
                     "startLine": 7,
                     "startColumn": 4,
                     "startOffset": 509,
-                    "endColumn": 44,
-                    "endOffset": 549
+                    "endColumn": 53,
+                    "endOffset": 558
                 },
                 "from": {
                     "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml",
                     "position": {
-                        "startLine": 13,
-                        "startColumn": 1,
-                        "startOffset": 828,
-                        "endColumn": 41,
-                        "endOffset": 868
+                        "startLine": 42,
+                        "startColumn": 4,
+                        "startOffset": 2366,
+                        "endColumn": 53,
+                        "endOffset": 2415
                     }
                 }
             },
@@ -120,76 +85,48 @@
                 "to": {
                     "startLine": 8,
                     "startColumn": 4,
-                    "startOffset": 554,
-                    "endColumn": 48,
-                    "endOffset": 598
+                    "startOffset": 563,
+                    "endColumn": 44,
+                    "endOffset": 603
                 },
                 "from": {
-                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 8,
-                        "startColumn": 1,
-                        "startOffset": 577,
-                        "endColumn": 45,
-                        "endOffset": 621
-                    }
+                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 9,
                     "startColumn": 4,
-                    "startOffset": 603,
-                    "endColumn": 71,
-                    "endOffset": 670
+                    "startOffset": 608,
+                    "endColumn": 48,
+                    "endOffset": 652
                 },
                 "from": {
-                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 41,
-                        "startColumn": 1,
-                        "startOffset": 2195,
-                        "endColumn": 68,
-                        "endOffset": 2262
-                    }
+                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 10,
                     "startColumn": 4,
-                    "startOffset": 675,
+                    "startOffset": 657,
                     "endColumn": 71,
-                    "endOffset": 742
+                    "endOffset": 724
                 },
                 "from": {
-                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 10,
-                        "startColumn": 1,
-                        "startOffset": 676,
-                        "endColumn": 68,
-                        "endOffset": 743
-                    }
+                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 11,
                     "startColumn": 4,
-                    "startOffset": 747,
-                    "endColumn": 53,
+                    "startOffset": 729,
+                    "endColumn": 71,
                     "endOffset": 796
                 },
                 "from": {
-                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 9,
-                        "startColumn": 1,
-                        "startOffset": 624,
-                        "endColumn": 50,
-                        "endOffset": 673
-                    }
+                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -197,227 +134,155 @@
                     "startLine": 12,
                     "startColumn": 4,
                     "startOffset": 801,
-                    "endColumn": 83,
-                    "endOffset": 880
+                    "endColumn": 53,
+                    "endOffset": 850
                 },
                 "from": {
-                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 32,
-                        "startColumn": 1,
-                        "startOffset": 1787,
-                        "endColumn": 80,
-                        "endOffset": 1866
-                    }
+                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 885,
-                    "endColumn": 81,
-                    "endOffset": 962
+                    "startOffset": 855,
+                    "endColumn": 83,
+                    "endOffset": 934
                 },
                 "from": {
-                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 11,
-                        "startColumn": 1,
-                        "startOffset": 746,
-                        "endColumn": 78,
-                        "endOffset": 823
-                    }
+                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 967,
-                    "endColumn": 46,
-                    "endOffset": 1009
+                    "startOffset": 939,
+                    "endColumn": 81,
+                    "endOffset": 1016
                 },
                 "from": {
-                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 14,
-                        "startColumn": 1,
-                        "startOffset": 871,
-                        "endColumn": 43,
-                        "endOffset": 913
-                    }
+                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 15,
                     "startColumn": 4,
-                    "startOffset": 1014,
-                    "endColumn": 57,
-                    "endOffset": 1067
+                    "startOffset": 1021,
+                    "endColumn": 46,
+                    "endOffset": 1063
                 },
                 "from": {
-                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 16,
-                        "startColumn": 1,
-                        "startOffset": 919,
-                        "endColumn": 54,
-                        "endOffset": 972
-                    }
+                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 16,
                     "startColumn": 4,
-                    "startOffset": 1072,
-                    "endColumn": 117,
-                    "endOffset": 1185
+                    "startOffset": 1068,
+                    "endColumn": 57,
+                    "endOffset": 1121
                 },
                 "from": {
-                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 26,
-                        "startColumn": 1,
-                        "startOffset": 1433,
-                        "endColumn": 114,
-                        "endOffset": 1546
-                    }
+                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 17,
                     "startColumn": 4,
-                    "startOffset": 1190,
-                    "endColumn": 50,
-                    "endOffset": 1236
+                    "startOffset": 1126,
+                    "endColumn": 117,
+                    "endOffset": 1239
                 },
                 "from": {
-                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 20,
-                        "startColumn": 1,
-                        "startOffset": 1048,
-                        "endColumn": 47,
-                        "endOffset": 1094
-                    }
+                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 18,
                     "startColumn": 4,
-                    "startOffset": 1241,
-                    "endColumn": 48,
-                    "endOffset": 1285
+                    "startOffset": 1244,
+                    "endColumn": 50,
+                    "endOffset": 1290
                 },
                 "from": {
-                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 19,
-                        "startColumn": 1,
-                        "startOffset": 1001,
-                        "endColumn": 45,
-                        "endOffset": 1045
-                    }
+                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 19,
                     "startColumn": 4,
-                    "startOffset": 1290,
-                    "endColumn": 86,
-                    "endOffset": 1372
+                    "startOffset": 1295,
+                    "endColumn": 48,
+                    "endOffset": 1339
                 },
                 "from": {
-                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 30,
-                        "startColumn": 1,
-                        "startOffset": 1700,
-                        "endColumn": 83,
-                        "endOffset": 1782
-                    }
+                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 20,
                     "startColumn": 4,
-                    "startOffset": 1377,
-                    "endColumn": 61,
-                    "endOffset": 1434
+                    "startOffset": 1344,
+                    "endColumn": 86,
+                    "endOffset": 1426
                 },
                 "from": {
-                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 28,
-                        "startColumn": 1,
-                        "startOffset": 1552,
-                        "endColumn": 58,
-                        "endOffset": 1609
-                    }
+                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 21,
                     "startColumn": 4,
-                    "startOffset": 1439,
-                    "endColumn": 89,
-                    "endOffset": 1524
+                    "startOffset": 1431,
+                    "endColumn": 61,
+                    "endOffset": 1488
                 },
                 "from": {
-                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 29,
-                        "startColumn": 1,
-                        "startOffset": 1612,
-                        "endColumn": 86,
-                        "endOffset": 1697
-                    }
+                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 22,
                     "startColumn": 4,
-                    "startOffset": 1529,
-                    "endColumn": 233,
-                    "endOffset": 1758
+                    "startOffset": 1493,
+                    "endColumn": 89,
+                    "endOffset": 1578
                 },
                 "from": {
-                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 1,
-                        "startOffset": 104,
-                        "endColumn": 230,
-                        "endOffset": 333
-                    }
+                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 23,
                     "startColumn": 4,
-                    "startOffset": 1763,
-                    "endColumn": 217,
-                    "endOffset": 1976
+                    "startOffset": 1583,
+                    "endColumn": 233,
+                    "endOffset": 1812
                 },
                 "from": {
-                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 1,
-                        "startOffset": 336,
-                        "endColumn": 214,
-                        "endOffset": 549
-                    }
+                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 1817,
+                    "endColumn": 217,
+                    "endOffset": 2030
+                },
+                "from": {
+                    "file": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\values\\strings.xml"
                 }
             }
         ]

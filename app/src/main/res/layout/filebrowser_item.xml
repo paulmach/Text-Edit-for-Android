@@ -19,13 +19,12 @@
         style="?android:attr/dropDownItemStyle"
         android:layout_width="fill_parent"
         android:layout_height="50dip"
-        android:paddingBottom="3px"
-        android:paddingLeft="10px"
-        android:paddingRight="3px"
-        android:paddingTop="3px"
+        android:paddingBottom="3dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="3dp"
+        android:paddingTop="3dp"
         android:scrollHorizontally="true"
         android:singleLine="false"
         android:textAppearance="?android:attr/textAppearanceLargeInverse"
         android:textSize="14.0sp" />
-
 </LinearLayout>

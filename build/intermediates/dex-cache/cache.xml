@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="D:\GitHub\Text-Edit-for-Android\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="3c60dd85b4eb8b92d6417c20f0a81c0c88104ad4">
+        <dex dex="D:\GitHub\Text-Edit-for-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_1ca2ad45592a579572523da1ff56229574da04ed\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\GitHub\Text-Edit-for-Android\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="0267de34d410bb6575d5c6696eb30844e77943de">
+        <dex dex="D:\GitHub\Text-Edit-for-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_61965e7b2f171af6e846241c2ab6210b128601ca\classes.dex" />
+    </item>
+
+</items>

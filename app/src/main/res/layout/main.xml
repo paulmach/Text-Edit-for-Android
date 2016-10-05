@@ -7,9 +7,11 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
         android:ems="20"
         android:gravity="center_horizontal"
-        android:text="\nText Edit\n"
+        android:text="@string/app_name"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textSize="24.0px" />
 
@@ -21,7 +23,7 @@
 
         <Button
             android:id="@+id/newfile_button"
-            android:layout_width="200px"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|center_vertical"
             android:gravity="center_horizontal|center_vertical"
@@ -29,7 +31,7 @@
 
         <Button
             android:id="@+id/openfile_button"
-            android:layout_width="200px"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|center_vertical"
             android:gravity="center_horizontal|center_vertical"

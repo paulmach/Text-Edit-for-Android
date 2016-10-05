@@ -40,4 +40,5 @@
         -->
     <!--  File Browser stuff -->
     <string name="nofilesindirectory">This directory is empty.</string>
+    <string name="file_browser">File Browser</string>
 </resources>
