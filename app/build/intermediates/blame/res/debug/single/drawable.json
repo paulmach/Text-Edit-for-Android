@@ -1,0 +1,110 @@
+[
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fileicon_pl.png",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\drawable\\fileicon_pl.png"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_save.png",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\drawable\\icon_save.png"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fileicon_c.png",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\drawable\\fileicon_c.png"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fileicon_txt.png",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\drawable\\fileicon_txt.png"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_openrecent.png",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\drawable\\icon_openrecent.png"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_saveas.png",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\drawable\\icon_saveas.png"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fileicon_php.png",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\drawable\\fileicon_php.png"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fileicon_f.png",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\drawable\\fileicon_f.png"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\usethisfolder.png",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\drawable\\usethisfolder.png"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fileicon_htm.png",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\drawable\\fileicon_htm.png"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fileicon_h.png",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\drawable\\fileicon_h.png"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\up.png",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\drawable\\up.png"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fileicon_default.png",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\drawable\\fileicon_default.png"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fileicon_html.png",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\drawable\\fileicon_html.png"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_new.png",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\drawable\\icon_new.png"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fileicon_py.png",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\drawable\\fileicon_py.png"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fileicon_java.png",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\drawable\\fileicon_java.png"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_dialog_menu_generic.png",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\drawable\\ic_dialog_menu_generic.png"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fileicon_cpp.png",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\drawable\\fileicon_cpp.png"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon.png",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\drawable\\icon.png"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_open.png",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\drawable\\icon_open.png"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_old.png",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\drawable\\icon_old.png"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\alert_dialog_icon.png",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\drawable\\alert_dialog_icon.png"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\colors.png",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\drawable\\colors.png"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_options.png",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\drawable\\icon_options.png"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fileicon_folder.png",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\drawable\\fileicon_folder.png"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fileicon_tex.png",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\drawable\\fileicon_tex.png"
+    }
+]
