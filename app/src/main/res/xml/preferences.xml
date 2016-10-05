@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Text Edit Preferences">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="linewrap"
+            android:summary="Wraps lines when they get too long"
+            android:title="Line Wrap" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="autocorrect"
+            android:summary="Correct mistyped words"
+            android:title="Auto Correct" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="autocase"
+            android:summary="Capitalize first letter in sentences"
+            android:title="Sentence Case" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="linksclickable"
+            android:summary="Links and phone numbers are clickable"
+            android:title="Auto Link" />
+        <org.paulmach.textedit.ClearSearchSuggestions
+            android:defaultValue="true"
+            android:key="clearsearch"
+            android:summary="Click here to clear list of recent searches"
+            android:title="Clear Search Suggestions" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Save/Open Preferences">
+        <org.paulmach.textedit.DefaultDirPreference
+            android:name="Set Default Directory"
+            android:defaultValue="/sdcard/"
+            android:key="defaultdir"
+            android:summary="Default save/open directory"
+            android:title="Default Directory" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="autocomplete"
+            android:summary="Autocomplete text when opening and saving files"
+            android:title="Autocomplete Filenames" />
+        <org.paulmach.textedit.ClearRecentFileListPreference
+            android:defaultValue="true"
+            android:key="clearrecent"
+            android:summary="Click here to clear list of recently opened files"
+            android:title="Clear Recent File List" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Appearance">
+        <org.paulmach.textedit.FontTypePreference
+            android:defaultValue="Monospace"
+            android:dialogTitle="Choose a font type"
+            android:key="font"
+            android:summary="Choose a font type"
+            android:title="Font" />
+        <org.paulmach.textedit.FontSizePreference
+            android:defaultValue="Medium"
+            android:dialogTitle="Choose a font size"
+            android:key="fontsize"
+            android:summary="Choose a font size"
+            android:title="Font Size" />
+        <org.paulmach.textedit.ColorPreference
+            android:defaultValue="0xFFCCCCCC"
+            android:dialogTitle="Choose a font color"
+            android:key="fontcolor"
+            android:summary="Choose a font color"
+            android:title="Font Color" />
+        <org.paulmach.textedit.ColorPreference
+            android:defaultValue="0xFF000000"
+            android:dialogTitle="Choose a background color"
+            android:key="bgcolor"
+            android:summary="Choose a background color"
+            android:title="Background Color" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="hidefilename"
+            android:summary="Allows for more screen space"
+            android:title="Hide Filename Bar" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Warranty Information">
+        <org.paulmach.textedit.WarrantyPreference
+            android:dialogTitle="Warranty Information"
+            android:key="warrantyinfo"
+            android:summary="Just a little FYI on the warranty"
+            android:title="Warranty Information" />
+
+    </PreferenceCategory>
+</PreferenceScreen>  

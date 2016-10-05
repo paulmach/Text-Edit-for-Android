@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:stretchColumns="0">
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/fb_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_gravity="center_vertical"
+                android:padding="5dip"
+                android:singleLine="true"
+                android:text="@string/file_browser"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <ImageButton
+                android:id="@+id/fb_usethisdirbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:adjustViewBounds="true"
+                android:gravity="right"
+                android:src="@drawable/usethisfolder" />
+
+            <ImageButton
+                android:id="@+id/fb_upbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="15"
+                android:adjustViewBounds="true"
+                android:gravity="right"
+                android:maxHeight="50dip"
+                android:maxWidth="50dip"
+                android:src="@drawable/up" />
+        </TableRow>
+    </TableLayout>
+
+    <!-- This is the main view for the whole filebrowser -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/filepath"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="3dip"
+            android:paddingLeft="5dip"
+            android:paddingTop="0dip"
+            android:singleLine="false"
+            android:text="Location: /sdcard/"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black" />
+
+        <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/filelist"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:cacheColorHint="#00000000"
+            android:color="@android:color/white"
+            android:divider="@android:drawable/divider_horizontal_bright"
+            android:orientation="vertical" />
+
+        <!-- This is to make sure the text box is always big -->
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@android:color/white" />
+
+        <!-- The visibility of this is changed to visible when there are no files -->
+        <TextView
+            android:id="@+id/nofilemessage"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@android:color/white"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/nofilesindirectory"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#aaa"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@android:color/white" />
+    </LinearLayout>
+</LinearLayout>

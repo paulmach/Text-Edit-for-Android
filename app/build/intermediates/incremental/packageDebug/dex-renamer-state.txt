@@ -1,0 +1,7 @@
+#Wed Oct 05 23:12:51 MSK 2016
+base.0=D\:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_1ca2ad45592a579572523da1ff56229574da04ed
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=D\:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_61965e7b2f171af6e846241c2ab6210b128601ca\\classes.dex
+base.1=D\:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_61965e7b2f171af6e846241c2ab6210b128601ca
+file.0=D\:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_1ca2ad45592a579572523da1ff56229574da04ed\\classes.dex

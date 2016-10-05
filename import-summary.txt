@@ -1,0 +1,123 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .idea\
+* .idea\compiler.xml
+* .idea\copyright\
+* .idea\copyright\profiles_settings.xml
+* .idea\encodings.xml
+* .idea\misc.xml
+* .idea\workspace.xml
+* LICENSE
+* README
+* app\
+* app\build.gradle
+* app\src\
+* app\src\main\
+* app\src\main\AndroidManifest.xml
+* app\src\main\java\
+* app\src\main\java\org\
+* app\src\main\java\org\paulmach\
+* app\src\main\java\org\paulmach\textedit\
+* app\src\main\java\org\paulmach\textedit\ClearRecentFileListPreference.java
+* app\src\main\java\org\paulmach\textedit\ClearSearchSuggestions.java
+* app\src\main\java\org\paulmach\textedit\ColorPreference.java
+* app\src\main\java\org\paulmach\textedit\DefaultDirPreference.java
+* app\src\main\java\org\paulmach\textedit\EditPreferences.java
+* app\src\main\java\org\paulmach\textedit\FileAutoCompleteArrayAdapter.java
+* app\src\main\java\org\paulmach\textedit\FileBrowser.java
+* app\src\main\java\org\paulmach\textedit\FileViewArrayAdapter.java
+* app\src\main\java\org\paulmach\textedit\FontSizePreference.java
+* app\src\main\java\org\paulmach\textedit\FontTypePreference.java
+* app\src\main\java\org\paulmach\textedit\SearchSuggestions.java
+* app\src\main\java\org\paulmach\textedit\WarrantyPreference.java
+* app\src\main\java\org\paulmach\textedit\pmTextEdit.java
+* app\src\main\res\
+* app\src\main\res\drawable\
+* app\src\main\res\drawable\alert_dialog_icon.png
+* app\src\main\res\drawable\colors.png
+* app\src\main\res\drawable\fileicon_c.png
+* app\src\main\res\drawable\fileicon_cpp.png
+* app\src\main\res\drawable\fileicon_default.png
+* app\src\main\res\drawable\fileicon_f.png
+* app\src\main\res\drawable\fileicon_folder.png
+* app\src\main\res\drawable\fileicon_h.png
+* app\src\main\res\drawable\fileicon_htm.png
+* app\src\main\res\drawable\fileicon_html.png
+* app\src\main\res\drawable\fileicon_java.png
+* app\src\main\res\drawable\fileicon_php.png
+* app\src\main\res\drawable\fileicon_pl.png
+* app\src\main\res\drawable\fileicon_py.png
+* app\src\main\res\drawable\fileicon_tex.png
+* app\src\main\res\drawable\fileicon_txt.png
+* app\src\main\res\drawable\ic_dialog_menu_generic.png
+* app\src\main\res\drawable\icon.png
+* app\src\main\res\drawable\icon_new.png
+* app\src\main\res\drawable\icon_old.png
+* app\src\main\res\drawable\icon_open.png
+* app\src\main\res\drawable\icon_openrecent.png
+* app\src\main\res\drawable\icon_options.png
+* app\src\main\res\drawable\icon_save.png
+* app\src\main\res\drawable\icon_saveas.png
+* app\src\main\res\drawable\up.png
+* app\src\main\res\drawable\usethisfolder.png
+* app\src\main\res\layout\
+* app\src\main\res\layout\colorchooser.xml
+* app\src\main\res\layout\dialog_mkdir.xml
+* app\src\main\res\layout\dialog_rename.xml
+* app\src\main\res\layout\dialog_savefile.xml
+* app\src\main\res\layout\dialog_savefile_noauto.xml
+* app\src\main\res\layout\edit.xml
+* app\src\main\res\layout\edit_autocase.xml
+* app\src\main\res\layout\edit_autotext.xml
+* app\src\main\res\layout\edit_autotext_autocase.xml
+* app\src\main\res\layout\filebrowser_all.xml
+* app\src\main\res\layout\filebrowser_item.xml
+* app\src\main\res\layout\filebrowser_list.xml
+* app\src\main\res\layout\filebrowser_title.xml
+* app\src\main\res\layout\main.xml
+* app\src\main\res\layout\openrecent_list.xml
+* app\src\main\res\layout\prefcolor.xml
+* app\src\main\res\values\
+* app\src\main\res\values\strings.xml
+* app\src\main\res\xml\
+* app\src\main\res\xml\preferences.xml
+* app\src\main\res\xml\searchable.xml
+* build.gradle
+* gradle\
+* gradle\wrapper\
+* gradle\wrapper\gradle-wrapper.jar
+* gradle\wrapper\gradle-wrapper.properties
+* gradlew
+* gradlew.bat
+* settings.gradle
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app\src\main\AndroidManifest.xml
+* res\ => app\src\main\res\
+* src\ => app\src\main\java\
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

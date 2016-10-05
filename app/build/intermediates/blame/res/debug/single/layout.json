@@ -1,0 +1,66 @@
+[
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\filebrowser_item.xml",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\layout\\filebrowser_item.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\colorchooser.xml",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\layout\\colorchooser.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_savefile.xml",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\layout\\dialog_savefile.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_rename.xml",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\layout\\dialog_rename.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\edit_autotext.xml",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\layout\\edit_autotext.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main.xml",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\layout\\main.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\filebrowser_title.xml",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\layout\\filebrowser_title.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_mkdir.xml",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\layout\\dialog_mkdir.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\filebrowser_list.xml",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\layout\\filebrowser_list.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\edit.xml",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\layout\\edit.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\edit_autocase.xml",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\layout\\edit_autocase.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\prefcolor.xml",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\layout\\prefcolor.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\openrecent_list.xml",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\layout\\openrecent_list.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_savefile_noauto.xml",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\layout\\dialog_savefile_noauto.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\edit_autotext_autocase.xml",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\layout\\edit_autotext_autocase.xml"
+    },
+    {
+        "merged": "D:\\GitHub\\Text-Edit-for-Android\\app\\build\\intermediates\\res\\merged\\debug\\layout\\filebrowser_all.xml",
+        "source": "D:\\GitHub\\Text-Edit-for-Android\\app\\src\\main\\res\\layout\\filebrowser_all.xml"
+    }
+]
